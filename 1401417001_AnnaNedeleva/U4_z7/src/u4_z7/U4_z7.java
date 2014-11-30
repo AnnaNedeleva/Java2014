@@ -21,11 +21,16 @@ public class U4_z7 {
         }
     }
      
-    public static double средноКвадратично(int m[]) {
+    public static double средноКвадратичноОтИнтервал(int m[]) {
         double suma = 0;
-        for (int i = 0; i < m.length; i++)
-            suma += Math.pow(m[i], 2);
-        suma=suma/ m.length;
+        int n=0;
+        for (int i = 0; i < m.length; i++){
+            if (m[i]>=-20 && m[i]<=20){
+                suma += Math.pow(m[i], 2);
+                n=n+1;
+            }
+        }
+        suma=suma/ n;
         System.out.println("Средно квадратично: " + Math.sqrt(suma));
         return Math.sqrt(suma);   
     }
@@ -34,29 +39,29 @@ public class U4_z7 {
      */
     public static void main(String[] args) {
        
-        int[] array1 = new int[randomNumberFromInterval(0,20)];
+        int[] array1 = new int[randomNumberFromInterval(1,20)];
         System.out.println("razmernost na 1-q masiv - " + array1.length);
         initiateArray(array1);
         for (int element:array1) {
             System.out.println(element);
         }
-        средноКвадратично(array1);
+        средноКвадратичноОтИнтервал(array1);
         
-        int[] array2 = new int[randomNumberFromInterval(0,20)];
+        int[] array2 = new int[randomNumberFromInterval(1,20)];
         System.out.println("razmernost na 2-q masiv - " + array2.length);
         initiateArray(array2);
         for (int element:array2){
             System.out.println(element);
         }
-        средноКвадратично(array2);
+        средноКвадратичноОтИнтервал(array2);
         
-        int[] array3 = new int[randomNumberFromInterval(0,20)];
+        int[] array3 = new int[randomNumberFromInterval(1,20)];
         System.out.println("razmernost na 2-q masiv - " + array3.length);
         initiateArray(array3);
         for (int element:array3){
             System.out.println(element);
         }
-        средноКвадратично(array3);
+        средноКвадратичноОтИнтервал(array3);
         // TODO code application logic here
     }
     
