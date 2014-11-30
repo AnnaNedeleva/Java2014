@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package u4_z7;
+import java.util.Random;
 /**
  *
  * @author User
@@ -38,8 +39,10 @@ public class U4_z7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        Random rand = new Random();
        
-        int[] array1 = new int[randomNumberFromInterval(1,20)];
+        int[] array1 = new int[rand.nextInt(20)+1];
         System.out.println("razmernost na 1-q masiv - " + array1.length);
         initiateArray(array1);
         for (int element:array1) {
@@ -47,7 +50,7 @@ public class U4_z7 {
         }
         средноКвадратичноОтИнтервал(array1);
         
-        int[] array2 = new int[randomNumberFromInterval(1,20)];
+        int[] array2 = new int[rand.nextInt(20)+1];
         System.out.println("razmernost na 2-q masiv - " + array2.length);
         initiateArray(array2);
         for (int element:array2){
@@ -55,7 +58,7 @@ public class U4_z7 {
         }
         средноКвадратичноОтИнтервал(array2);
         
-        int[] array3 = new int[randomNumberFromInterval(1,20)];
+        int[] array3 = new int[rand.nextInt(20)+1];
         System.out.println("razmernost na 2-q masiv - " + array3.length);
         initiateArray(array3);
         for (int element:array3){
